@@ -32,7 +32,7 @@
       }
     },
     "kind":{
-      "type": "string",
+      "type": "string"
     }
   },
   "variables": {
