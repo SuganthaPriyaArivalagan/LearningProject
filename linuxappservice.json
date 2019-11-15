@@ -30,6 +30,9 @@
       "metadata": {
         "description": "Location for all resources."
       }
+    },
+    "kind":{
+      "type": "string",
     }
   },
   "variables": {
@@ -45,7 +48,7 @@
       "sku": {
         "name": "[parameters('sku')]"
       },
-      "kind": "linux",
+      "kind": "[parameters('kind')]",
       "properties":{
         "reserved":true
       }
