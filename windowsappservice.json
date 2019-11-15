@@ -22,6 +22,9 @@
       "metadata": {
         "description": "Location for all resources"
       }
+    },
+    "kind":{
+      "type": "string"
     }
   },
   "variables": {
@@ -32,7 +35,7 @@
     {
       "apiVersion": "2018-02-01",
       "type": "Microsoft.Web/serverfarms",
-      "kind": "app",
+      "kind": "[parameters('kind')]",
       "name": "[variables('appServicePlanName')]",
       "location": "[parameters('location')]",
       "properties": {},
@@ -44,7 +47,7 @@
     {
       "apiVersion": "2018-11-01",
       "type": "Microsoft.Web/sites",
-      "kind": "app",
+      "kind": "[parameters('kind')]",
       "name": "[variables('webAppPortalName')]",
       "location": "[parameters('location')]",
       "properties": {
